@@ -11,6 +11,8 @@ import ArticlePage from './Pages/ArticlePage.jsx';
 import TrendingPage from './Pages/TrendingPage.jsx';
 import ErrorBoundary from './Pages/ErrorBoundary.jsx';
 import App from './App.jsx';
+import Astrology from './Pages/Astrology.jsx';
+import SearchPage from './Pages/SearchPage.jsx';
 
 const router = createBrowserRouter([
   // Public Routes
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
       {
         path: '/article/:url',
         element: <ArticlePage />,
+      },
+      {
+        path: '/astrology',
+        element: <Astrology />,
+      },
+      {
+        path: '/search',
+        element: <SearchPage />,
       },
     ],
   },

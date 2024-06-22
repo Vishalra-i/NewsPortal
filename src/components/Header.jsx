@@ -19,7 +19,22 @@ function Header() {
   return (
     <nav className="z-10 fixed top-0 w-full h-20 bg-white shadow-md shadow-slate-300">
       <div className="flex justify-between items-center p-4">
-        <Logo />
+        <div className="flex justify-between items-center gap-5">
+           <Logo />
+           {/* //Search for mobile devices */}
+      <div className={`md:hidden   `}>
+      <NavLink
+            to="/Search"
+            className={({ isActive }) =>
+              `${isActive ? 'text-green-700' : 'text-black'} px-4 py-2  font-bold`
+            }
+          >
+            <img width="30" height="30" src="https://img.icons8.com/ios/30/search--v1.png" alt="search--v1"/>
+          </NavLink>
+      </div>
+
+        </div>
+        
         <div className="hidden md:flex text-md gap-6">
           <NavLink
             to="/"
@@ -38,23 +53,31 @@ function Header() {
             Trending🔥
           </NavLink>
           <NavLink
-            to="/contact"
+            to="/astrology"
             className={({ isActive }) =>
               `${isActive ? 'text-green-700' : 'text-black'} px-4 py-2 hover:text-lg font-bold`
             }
           >
-            Contact
+            Astrology
+          </NavLink>
+          <NavLink
+            to="/Search"
+            className={({ isActive }) =>
+              `${isActive ? 'text-green-700' : 'text-black'} px-4 py-2 hover:text-lg font-bold`
+            }
+          >
+            <img width="30" height="30" src="https://img.icons8.com/ios/30/search--v1.png" alt="search--v1"/>
           </NavLink>
         </div>
-        <div className="hidden md:flex gap-5">
+        <div className="hidden md:flex gap-5 ">
           <Link
-            to="/auth/login"
+            to="#"
             className="px-4 py-2 text-sm font-semibold text-center text-white rounded-md hover:text-blue-300 bg-blue-400 border-none"
           >
             Login
           </Link>
           <Link
-            to="/auth/register"
+            to="#"
             className="px-4 py-2 text-sm font-semibold text-center text-white rounded-md hover:text-green-300 bg-green-400 border-none"
           >
             Register
@@ -80,6 +103,8 @@ function Header() {
           </svg>
         </button>
       </div>
+
+      
       <div
         className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-white shadow-md shadow-slate-300`}
       >
@@ -108,7 +133,7 @@ function Header() {
           }
           onClick={handleCloseMenu}
         >
-          Contact
+          Astrology
         </NavLink>
         <Link
           to="/auth/login"

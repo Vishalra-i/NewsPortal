@@ -5,7 +5,7 @@ import parse, { domToReact } from 'html-react-parser';
 
 
 function ArticlePage() {
-  const { url } = useParams(); // Fetch the URL parameter
+  const { url } = useParams();
   const [loading, setLoading] = useState(false);
   const [article, setArticle] = useState(null);
 
@@ -23,6 +23,7 @@ function ArticlePage() {
       console.error('Error fetching article:', error);
     } finally {
       setLoading(false);
+      window.scrollTo(0, 0)
     }
   };
 
