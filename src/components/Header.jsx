@@ -22,7 +22,7 @@ function Header() {
         <div className="flex justify-between items-center gap-5">
            <Logo />
            {/* //Search for mobile devices */}
-      <div className={`md:hidden   `}>
+      <div className={`md:hidden `}>
       <NavLink
             to="/Search"
             className={({ isActive }) =>
@@ -33,13 +33,13 @@ function Header() {
           </NavLink>
       </div>
 
-        </div>
+      </div>
         
-        <div className="hidden md:flex text-md gap-6">
+        <div className="hidden md:flex text-md gap-x-14 items-center ">
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `${isActive ? 'text-green-700' : 'text-black'} px-4 py-2 hover:text-lg font-bold`
+              `${isActive ? 'text-green-700' : 'text-black'} hover:text-xl font-bold`
             }
           >
             Home
@@ -47,7 +47,7 @@ function Header() {
           <NavLink
             to="/trending"
             className={({ isActive }) =>
-              `${isActive ? 'text-green-700' : 'text-black'} px-4 py-2 hover:text-lg font-bold`
+              `${isActive ? 'text-green-700' : 'text-black'} hover:text-xl font-bold`
             }
           >
             Trending🔥
@@ -55,7 +55,7 @@ function Header() {
           <NavLink
             to="/astrology"
             className={({ isActive }) =>
-              `${isActive ? 'text-green-700' : 'text-black'} px-4 py-2 hover:text-lg font-bold`
+              `${isActive ? 'text-green-700' : 'text-black'}  hover:text-xl font-bold`
             }
           >
             Astrology
@@ -63,7 +63,7 @@ function Header() {
           <NavLink
             to="/Search"
             className={({ isActive }) =>
-              `${isActive ? 'text-green-700' : 'text-black'} px-4 py-2 hover:text-lg font-bold`
+              `${isActive ? 'text-green-700' : 'text-black'}  hover:text-xl font-bold`
             }
           >
             <img width="30" height="30" src="https://img.icons8.com/ios/30/search--v1.png" alt="search--v1"/>
@@ -106,44 +106,44 @@ function Header() {
 
       
       <div
-        className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-white shadow-md shadow-slate-300`}
+        className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-white shadow-md shadow-slate-300 text-center`}
       >
         <NavLink
           to="/"
           className={({ isActive }) =>
-            `${isActive ? 'text-green-700' : 'text-black'} block px-4 py-2 hover:text-lg font-bold`
+            `${isActive ? 'text-green-700' : 'text-black'} block p-4 hover:text-xl font-bold hover:bg-gray-300 rounded-sm`
           }
           onClick={handleCloseMenu}
         >
-          Home
+        Home
         </NavLink>
         <NavLink
           to="/trending"
           className={({ isActive }) =>
-            `${isActive ? 'text-green-700' : 'text-black'} block px-4 py-2 hover:text-lg font-bold`
+            `${isActive ? 'text-green-700' : 'text-black'} block p-4 hover:text-xl font-bold hover:bg-gray-300 rounded-sm`
           }
           onClick={handleCloseMenu}
         >
           Trending🔥
         </NavLink>
         <NavLink
-          to="/contact"
+          to="/astrology"
           className={({ isActive }) =>
-            `${isActive ? 'text-green-700' : 'text-black'} block px-4 py-2 hover:text-lg font-bold`
+            `${isActive ? 'text-green-700' : 'text-black'} block p-4 hover:text-xl font-bold hover:bg-gray-300 rounded-sm`
           }
           onClick={handleCloseMenu}
         >
           Astrology
         </NavLink>
         <Link
-          to="/auth/login"
+          to="#"
           className="block px-4 py-2 mt-2 text-sm font-semibold text-center text-white rounded-md hover:text-blue-300 bg-blue-400 border-none"
           onClick={handleCloseMenu}
         >
           Login
         </Link>
         <Link
-          to="/auth/register"
+          to="#"
           className="block px-4 py-2 mt-2 text-sm font-semibold text-center text-white rounded-md hover:text-green-300 bg-green-400 border-none"
           onClick={handleCloseMenu}
         >
