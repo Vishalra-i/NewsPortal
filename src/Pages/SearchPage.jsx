@@ -56,7 +56,8 @@ function SearchPage() {
           <span className="text-white">Search</span>
         </button>
       </div>
-      {error && <h1 className="text-red-500 text-center mb-4">{error}</h1>}
+      <p className=' text-lg font-bold'>Found Articles : <span className='text-red-500'>{articles?.length || 0}</span></p>
+      {error && <h1 className="text-red-500 text-center font-semibold mb-4">{error}</h1>}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 py-5 space-y-5 w-full">
         <WeatherReport />
         <div className="flex flex-col justify-center items-center py-5 space-y-5 w-full">

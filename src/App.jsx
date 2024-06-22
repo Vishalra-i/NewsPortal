@@ -10,6 +10,8 @@ function App() {
   const dispatch = useDispatch();
 
   async function fetchData() {
+    console.log(`start`)
+    console.log(import.meta.env.VITE_API_KEY)
     try {
       const response = await axios.get(
         `https://api.worldnewsapi.com/top-news?source-country=in&language=en`,
